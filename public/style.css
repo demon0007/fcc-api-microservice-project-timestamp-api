@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-  padding: 1rem 1rem 0 1rem;
+  padding: 5rem 1rem 0 1rem;
 }
 
 main {
@@ -34,6 +34,10 @@ main p {
   text-align: center;
   padding: 0 1rem;
   margin-bottom: 1rem;
+}
+
+main a {
+  color: white;
 }
 
 ul {
