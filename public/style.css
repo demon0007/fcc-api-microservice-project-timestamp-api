@@ -18,4 +18,28 @@ header {
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
-header
+header h1 {
+  padding: 1rem 1rem 0 1rem;
+}
+
+main {
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  max-width: 600px;
+}
+
+main p {
+  text-align: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 2rem; 
+}
+
+footer {
+  padding: 0 3rem;
+  text-align: right;
+}
