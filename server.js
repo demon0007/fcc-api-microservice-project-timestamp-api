@@ -16,19 +16,20 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/api/timestamp/', (req, res) => {
-  res.json({"unix": new Date().getTime(), "utc": new Date().toUTCString()})
-})
 
 app.get('/api/timestamp/:date_string', (req, res) => {
   let date = new Date(isNaN(req.params.date_string)?req.params.date_string:parseInt(req.params.date_string))
-  console.log(isNaN(date.getTime()))
+  // console.log(isNaN(date.getTime()))
   if (isNaN(date.getTime())) {
     res.json({"error": "Invalid Date"})
   } else {
-    console.log(date.getTime())
+    // console.log(date.getTime())
     res.json({"unix": date.getTime(), "utc": date.toUTCString()})
   }
+})
+
+app.get('/api/timestamp/', (req, res) => {
+  res.json({"unix": new Date().getTime(), "utc": new Date().toUTCString()})
 })
 
 // listen for requests :)
