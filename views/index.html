@@ -43,7 +43,12 @@
         <li>If &ltdate string&gt is not in valid format it will return a JSON with error of "Invalid Date"</li>
         <li>Examples: </li>
         <ul>
-          <li>Request: <a href"/api/timestamp/2015-12-25">/api/timestamp/2015-12-25</a></li>
+          <li>Request: <a href="/api/timestamp/2015-12-25"> &#47api&#47timestamp<span>&#47</span>2015-12-25</a></li>
+          <li>Output: <br /><code>{"unix":1451001600000,"utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></li>
+          <li>Request: <a href="/api/timestamp/1451001600000"> &#47api&#47timestamp<span>&#47</span>1451001600000</a></li>
+          <li>Output: <br /><code>{"unix":1451001600000,"utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></li>
+          <li>Request: <a href="/api/timestamp/2015-13-13"> &#47api&#47timestamp<span>&#47</span>2015-13-13</a></li>
+          <li>Output: <br /><code>{"error":"Invalid Date"}</code></li>
         </ul>
       </ul>
     </main>
