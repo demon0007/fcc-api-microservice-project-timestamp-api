@@ -16,7 +16,11 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/api/timestamp/:date_string', (req, res))
+app.get('/api/timestamp/:date_string', (req, res) => {
+  let date = new Date(req.param.date_string)
+  console.log(date)
+  res.json({"date": date.getTime()})
+})
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
