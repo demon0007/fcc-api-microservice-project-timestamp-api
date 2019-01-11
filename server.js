@@ -17,12 +17,13 @@ app.get('/', function(request, response) {
 });
 
 app.get('/api/timestamp/:date_string', (req, res) => {
-  console.log(req.params.date_string)
-  let date = new Date(req.params.date_string)
-  if (typeof date.getTime() !== 'number') {
-    res.json({"error": date})
+  let date = new Date(isNaN(req.params.date_string)?req.params.date_string:parseInt(req.params.date_string))
+  console.log(isNaN(date.getTime()))
+  if (isNaN(date.getTime())) {
+    res.json({"error": "Invalid Date"})
   } else {
-    res.json({})
+    console.log(date.getTime())
+    res.json({"unix": date.getTime(), "utc": date.toUTCString()})
   }
 })
 
