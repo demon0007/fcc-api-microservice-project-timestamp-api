@@ -33,7 +33,20 @@
     <main>
       <p>This is an FCC project. It is an API which responds with a JSON of the UNIX and UTC format of the date string provided in the URL.</p>
       <ul>
-        <li></li>
+        <li>This API works on the url /api/timestamp/&ltdate string&gt</li>
+        <li>&ltdate string&gt should be in either format: </li>
+        <ul>
+          <li>YYYY-MM-DD</li>
+          <li>Unix based Epoch Number</li>
+        </ul>
+        <li>If The &ltdate string&gt is empty it will return with current time as &ltdate string&gt parameter</li>
+        <li>If &ltdate string&gt is not in valid format it will return a JSON with error of "Invalid Date"</li>
       </ul>
-</body>
+    </main>
+    <footer>
+      <h5>
+        Made By: Priyesh Shrivastava
+      </h5>
+    </footer>
+  </body>
 </html>

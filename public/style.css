@@ -10,9 +10,12 @@
 body {
   font-family: 'PT Sans Narrow', sans-serif;
   text-align: center;
+  background-color: #333;
+  color: #ddd;
 }
 
 header {
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
+header
