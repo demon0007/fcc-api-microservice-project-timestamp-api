@@ -17,9 +17,13 @@ app.get('/', function(request, response) {
 });
 
 app.get('/api/timestamp/:date_string', (req, res) => {
-  let date = new Date(req.param.date_string)
-  console.log(date)
-  res.json({"date": date.getTime()})
+  console.log(req.params.date_string)
+  let date = new Date(req.params.date_string)
+  if (typeof date.getTime() !== 'number') {
+    res.json({"error": date})
+  } else {
+    res.json({})
+  }
 })
 
 // listen for requests :)
